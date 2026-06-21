@@ -1,18 +1,12 @@
 services:
   app:
-    build:
-      context: .
-      target: runner
+    image: mahtot21/ethiopian-heritage-blog:latest
     container_name: ethiopian-heritage-blog-prod
     ports:
       - "80:3000"
+    env_file: .env
     environment:
       - NODE_ENV=production
-      - MONGODB_URI=mongodb://mongodb:27017/Blog
-      - JWT_SECRET=${JWT_SECRET}
-      - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
-      - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
-      - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
     restart: always
     depends_on:
       - mongodb
