@@ -1,0 +1,60 @@
+/* ─── SHARED DASHBOARD THEME ─────────────────────────────────────────── */
+
+.admin-dashboard-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #0a0a0a;
+  color: white;
+  overflow: hidden;
+}
+
+/* Reusing the animated background patterns from login.css */
+.admin-bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Sidebar Styling */
+.sidebar-glass {
+  background: rgba(10, 10, 10, 0.8) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+  z-index: 50 !important;
+}
+
+@media (min-width: 768px) {
+  .sidebar-glass {
+    background: rgba(255, 255, 255, 0.02) !important;
+  }
+}
+
+/* Header Styling */
+.header-glass {
+  background: rgba(10, 10, 10, 0.5) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  z-index: 40 !important;
+}
+
+/* Scrollbar for Glass Containers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 165, 116, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 165, 116, 0.2);
+}
